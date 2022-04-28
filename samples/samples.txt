@@ -1,0 +1,25 @@
+create table songs(initials string,track_id string, artist_name string, title string, loudness number, tempo number, time_signature number, key number,mode number,duration number, year number) type="csv", path="C:\\Users\\Ma3roof\\Desktop\\samples\\songs.csv";
+
+create type region ( name string);
+create type country (id number, name string, region region);
+create type city (id number, name string, country country);
+
+create table clubs  (id number,name string, city city) type="json", path="C:\\Users\\Ma3roof\\Desktop\\samples\\clubs.json";
+create table countries (id number, name string, code string, post_code string, region string) type="json" , path= "C:\\Users\\Ma3roof\\Desktop\\samples\\countries.json";
+
+
+create aggregation_function count("C:\\Users\\Ma3roof\\Desktop\\samples\\count.jar","<your className>","<your methodName>",number,[number]);
+create aggregation_function avg("<your jar path>","<your className>","<your methodName>",number,[number]);
+create aggregation_function max("<your jar path>","<your className>","<your methodName>",number,[number]);
+create aggregation_function stddev("<your jar path>","<your className>","<your methodName>",number,[number]);
+
+
+
+
+
+
+
+fn()
+{
+       print(c);
+}
